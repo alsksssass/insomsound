@@ -770,7 +770,7 @@ if(message.content.startsWith(`!음성`)) {
 
 
 const player = createAudioPlayer()
-const resource = createAudioResource('./music/123.mp3')
+const resource = createAudioResource('./music/1234.mp3')
 
 
 player.play(resource, {seek: 0, volume: 1.0})
