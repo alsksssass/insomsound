@@ -760,7 +760,7 @@ calling --
     
   
 }
-if(discalling == 1) {
+if(message.content.startsWith(`!음성`)) {
   const connection = joinVoiceChannel({
     channelId: '981144982201171992',
     guildId: '981144982201171988',
