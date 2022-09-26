@@ -760,7 +760,7 @@ calling --
     
   
 }
-if(message.content.startsWith(`!음성`)) {
+if(discalling == 1) {
   const connection = joinVoiceChannel({
     channelId: '981144982201171992',
     guildId: '981144982201171988',
@@ -785,6 +785,33 @@ discalling --
     
   
 }
+  
+  if(message.content.startsWith(`!음성`)) {
+  const connection = joinVoiceChannel({
+    channelId: '981144982201171992',
+    guildId: '981144982201171988',
+    adapterCreator: message.guild.voiceAdapterCreator
+    
+})
+
+
+const player = createAudioPlayer()
+const resource = createAudioResource('./music/1234.mp3')
+
+
+player.play(resource, {seek: 0, volume: 1.0})
+connection.subscribe(player);
+
+player.on(AudioPlayerStatus.Idle, () => {
+  connection.destroy();
+});
+
+
+
+    
+  
+}
+
 });
 
 ///////////////////////////////////////
