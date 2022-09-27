@@ -137,8 +137,8 @@ client.on('interactionCreate', async interaction => {
     const message = await interaction.channel.send('```사장님이 나를 쳐다본다.\n명패에 사장 박서함 이라고 쓰여있다.```');
     message.react('❤️');
   } else if (commandName === '영양제') {
-    await interaction.deferReply();
-    const message = await interaction.channel.send({ files: ['https://i.imgur.com/7gvfEXd.png'] });
+    await interaction.reply({ files: ["https://i.imgur.com/7gvfEXd.png"] });
+    const message = await interaction.channel.send('각종 영양제가 들어있다.\n우리 회사에서 판매하는 강아지 영양제이다. \n없어서 못 파는 회사의 전통적인 인기상품이다');
     message.react('❤️');
   } else if (commandName === '가나파이') {
     await interaction.deferReply();
@@ -156,7 +156,7 @@ client.on('interactionCreate', async interaction => {
     await client.channels.cache.get('999886290008932433').send({ files: ['https://i.imgur.com/nQI3PI3.jpg'] });
     const message1 = await client.channels.cache.get('999886290008932433').send('```휴대폰\n어딘가로 전화할 수 있지 않을까?```');
     await message1.react('❤️');
-    const message2 =await client.channels.cache.get('991916794308743198').send('```/전화 ??????????? (-는 제외)명령어로 전화를 걸수 있다!!```');
+    const message2 =await client.channels.cache.get('991916794308743198').send('```/전화 다이얼:???????????  (-는 제외)명령어로 전화를 걸수 있다!!```');
     await message2.react('❤️');
   } else if (commandName === '시계발견') {
     tlrp11 *= 0
@@ -164,7 +164,7 @@ client.on('interactionCreate', async interaction => {
     await interaction.reply('지금은 1시입니다. 시계도 못 보니?\n시계 뒷면을 볼 수 있을 것 같다.')
     const message = await interaction.channel.send('```입력에서 시간을 입력해 보자!!```');
     message.react('❤️');
-    const message2 =await client.channels.cache.get('991916794308743198').send('```/시간 ???? (숫자만4자리) 명령어로 시간을 바꿀수 있다!!```');
+    const message2 =await client.channels.cache.get('991916794308743198').send('```/시간 시간:???? (숫자만4자리) 명령어로 시간을 바꿀수 있다!!```');
     await message2.react('❤️');
   } else if (commandName === '의자') {
     await interaction.deferReply();
@@ -305,7 +305,7 @@ client.on('interactionCreate', async interaction => {
     await message9.react('❤️');
     const message10 = await client.channels.cache.get('999908072879292477').send('```오프리숀, 회사에서 널 힘들 게 하는 게 뭐야?\n\n지금 그 상황을 어떻게 해결하고 싶어? ```');////10
     await message10.react('❤️');
-    const message11 = await client.channels.cache.get('991916794308743198').send('```/비번 ????  (숫자)입력\n 잘모르겠다면 /비번 비번:9999 를 그대로 복사해서 숫자만 바꾸고 엔터```');
+    const message11 = await client.channels.cache.get('991916794308743198').send('```/비번 비번:????  (숫자)입력\n 잘모르겠다면 /비번 비번:9999 를 그대로 복사해서 숫자만 바꾸고 엔터```');
   } else if (interaction.commandName === '올청소') {
     await interaction.reply('삭제(Max500)');
     const tkrwp = await client.channels.cache.get('1003991219275321364')
@@ -585,7 +585,7 @@ vpdjvhs *= 0
 vpdjvhs += 1
     await interaction.reply('```두둥!!```')
     await client.channels.cache.get('991916794308743198').send({ files: ['https://i.imgur.com/T93cWmJ.png'] });
-    const message2 = await client.channels.cache.get('991916794308743198').send('```/패턴 ????????? 로풀수있다. 숫자이며 위의 사진참고!```');
+    const message2 = await client.channels.cache.get('991916794308743198').send('```/패턴 패턴:????????? 로풀수있다. 숫자이며 위의 사진참고!```');
       message2.react('📱');
     const message1 = await interaction.channel.send('```페어의 폰을 찾았다!```');
       message1.react('📱');
