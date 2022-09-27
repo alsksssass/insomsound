@@ -785,7 +785,7 @@ player.on(AudioPlayerStatus.Idle, () => {
 
 
 const player = createAudioPlayer()
-const resource = createAudioResource('./music/disconect.mp3')
+const resource = createAudioResource('./music/disconect1.mp3')
 
 
 player.play(resource, {seek: 0, volume: 1.0})
