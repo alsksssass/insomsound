@@ -753,7 +753,8 @@ if(message.content.startsWith(`!타이머`)) { // If the message content is "!pi
 }, 1000)
 }
 
-if(calling === 1) {
+
+if(message.content.startsWith(`!걸기`)) {
   const connection = joinVoiceChannel({
     channelId: '981144982201171992',
     guildId: '981144982201171988',
@@ -772,15 +773,9 @@ connection.subscribe(player);
 player.on(AudioPlayerStatus.Idle, () => {
   connection.destroy();
 });
-
-calling *= 0
-
-    
-  
 }
-
   
-  if(message.content.startsWith(`!음성`)) {
+  if(message.content.startsWith(`!끊기`)) {
   const connection = joinVoiceChannel({
     channelId: '981144982201171992',
     guildId: '981144982201171988',
@@ -790,7 +785,7 @@ calling *= 0
 
 
 const player = createAudioPlayer()
-const resource = createAudioResource('./music/calling.mp3')
+const resource = createAudioResource('./music/disconect.mp3')
 
 
 player.play(resource, {seek: 0, volume: 1.0})
