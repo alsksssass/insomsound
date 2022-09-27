@@ -138,7 +138,7 @@ client.on('interactionCreate', async interaction => {
     message.react('❤️');
   } else if (commandName === '영양제') {
     await interaction.reply({ files: ["https://i.imgur.com/7gvfEXd.png"] });
-    const message = await interaction.channel.send('각종 영양제가 들어있다.\n우리 회사에서 판매하는 강아지 영양제이다. \n없어서 못 파는 회사의 전통적인 인기상품이다');
+    const message = await interaction.channel.send('```각종 영양제가 들어있다.\n우리 회사에서 판매하는 강아지 영양제이다. \n없어서 못 파는 회사의 전통적인 인기상품이다```');
     message.react('❤️');
   } else if (commandName === '가나파이') {
     await interaction.deferReply();
