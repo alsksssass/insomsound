@@ -779,6 +779,28 @@ player.on(AudioPlayerStatus.Idle, () => {
 });
 await client.user.setAvatar('https://i.imgur.com/YW9XMMz.png')////원래이미지
 }
+  if(message.content.startsWith(`!음악`)) {
+    
+  const connection = joinVoiceChannel({
+    channelId: '981144982201171992',
+    guildId: '981144982201171988',
+    adapterCreator: message.guild.voiceAdapterCreator
+    
+})
+
+
+const player = createAudioPlayer()
+const resource = createAudioResource('./music/rel (1).mp3')
+
+
+player.play(resource, {seek: 0, volume: 1.0})
+connection.subscribe(player);
+
+player.on(AudioPlayerStatus.Idle, () => {
+  connection.destroy();
+});
+
+}
   
   if(message.content.startsWith(`!끊기`)) {
     await client.user.setAvatar('https://emoji-uc.akamaized.net/orig/64/ed4b99d80ee9809345a9e47abffa40.png')////전화 끊기
