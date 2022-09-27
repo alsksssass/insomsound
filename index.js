@@ -757,7 +757,7 @@ if(message.content.startsWith(`!타이머`)) { // If the message content is "!pi
 }
 
 
-if(message.content.startsWith(`!걸기`)) {
+if(message.content.startsWith(`!걸기`) && message.channel.id == '1012279584588308511') {
 
   const connection = joinVoiceChannel({
     channelId: '981144982201171992',
@@ -779,7 +779,7 @@ player.on(AudioPlayerStatus.Idle, () => {
 });
 
 }
-  if(message.content.startsWith(`!음악`)) {
+  if(message.content.startsWith(`!음악`) && message.channel.id == '1012279584588308511') {
     
   const connection = joinVoiceChannel({
     channelId: '981144982201171992',
@@ -802,7 +802,7 @@ player.on(AudioPlayerStatus.Idle, () => {
 
 }
   
-  if(message.content.startsWith(`!끊기`)) {
+  if(message.content.startsWith(`!끊기`)&& message.channel.id == '1012279584588308511') {
 
   const connection = joinVoiceChannel({
     channelId: '981144982201171992',
