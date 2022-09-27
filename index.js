@@ -1,7 +1,7 @@
 
 
 // Require the necessary discord.js classes
-const { Client, GatewayIntentBits, Collection, MembershipScreeningFieldType, ClientUser, User, time, GuildChannel, GuildManager, MessageManager, GuildMemberManager, GuildBanManager, GuildBan, GuildStickerManager, PermissionsBitField, PermissionOverwriteManager, MessageFlagsBitField, GuildMemberRoleManager, GuildMember, MessageReaction } = require('discord.js');
+const { Client, GatewayIntentBits, Collection, MembershipScreeningFieldType, ClientUser, User, time, GuildChannel, GuildManager, MessageManager, GuildMemberManager, GuildBanManager, GuildBan, GuildStickerManager, PermissionsBitField, PermissionOverwriteManager, MessageFlagsBitField, GuildMemberRoleManager, GuildMember, MessageReaction, SlashCommandBuilder } = require('discord.js');
 const { createAudioResource, createAudioPlayer, joinVoiceChannel, NoSubscriberBehavior, AudioPlayerStatus, generateDependencyReport, getVoiceConnection, VoiceConnectionStatus, StreamType } = require('@discordjs/voice');
 const wait = require('node:timers/promises').setTimeout;///딜레이 구문
 const { ekdha } = require('./config.json');
@@ -542,9 +542,27 @@ client.on('interactionCreate', async interaction => {
     const string = interaction.options.getString('다이얼');
     if (string == wjdekq && wjsghkrkqt == 1) {
       await interaction.deferReply();
-      calling == 1
       const message = await interaction.channel.send(' ```전화가 걸렸다 !! 뚜르르르르 뚜르르르르```');
       message.react('📲');
+      connection = joinVoiceChannel({
+        channelId: '981144982201171992',
+        guildId: interaction.guildId,
+        adapterCreator: interaction.channel.guild.voiceAdapterCreator,
+      });
+  
+  console.log(interaction.channelId)
+  console.log(interaction.guildId)
+  console.log('노래')
+  const player = createAudioPlayer()
+  const resource = createAudioResource('./music/calling.mp3')
+  
+  
+  player.play(resource, {seek: 0, volume: 1.0})
+  connection.subscribe(player);
+  
+  player.on(AudioPlayerStatus.Idle, () => {
+    connection.destroy();
+  });
     }
     if(wjsghkrkqt != 1) {
           await interaction.deferReply();
