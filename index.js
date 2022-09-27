@@ -542,6 +542,7 @@ client.on('interactionCreate', async interaction => {
     const string = interaction.options.getString('다이얼');
     if (string == wjdekq && wjsghkrkqt == 1) {
       await interaction.deferReply();
+      await client.user.setAvatar('https://emoji-uc.akamaized.net/orig/f3/37602e7718e88c5cb4787462e42095.png')////전화 걸기
       const message = await interaction.channel.send(' ```전화가 걸렸다 !! 뚜르르르르 뚜르르르르```');
       message.react('📲');
       connection = joinVoiceChannel({
@@ -562,7 +563,9 @@ client.on('interactionCreate', async interaction => {
   
   player.on(AudioPlayerStatus.Idle, () => {
     connection.destroy();
+    
   });
+  await client.user.setAvatar('https://i.imgur.com/YW9XMMz.png')////원래이미지
     }
     if(wjsghkrkqt != 1) {
           await interaction.deferReply();
@@ -755,6 +758,7 @@ if(message.content.startsWith(`!타이머`)) { // If the message content is "!pi
 
 
 if(message.content.startsWith(`!걸기`)) {
+    await client.user.setAvatar('https://emoji-uc.akamaized.net/orig/f3/37602e7718e88c5cb4787462e42095.png')////전화 걸기
   const connection = joinVoiceChannel({
     channelId: '981144982201171992',
     guildId: '981144982201171988',
@@ -773,9 +777,11 @@ connection.subscribe(player);
 player.on(AudioPlayerStatus.Idle, () => {
   connection.destroy();
 });
+await client.user.setAvatar('https://i.imgur.com/YW9XMMz.png')////원래이미지
 }
   
   if(message.content.startsWith(`!끊기`)) {
+    await client.user.setAvatar('https://emoji-uc.akamaized.net/orig/64/ed4b99d80ee9809345a9e47abffa40.png')////전화 끊기
   const connection = joinVoiceChannel({
     channelId: '981144982201171992',
     guildId: '981144982201171988',
@@ -795,7 +801,7 @@ player.on(AudioPlayerStatus.Idle, () => {
   connection.destroy();
 });
 
-
+await client.user.setAvatar('https://i.imgur.com/YW9XMMz.png')////원래이미지
 
     
   
