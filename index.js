@@ -1,5 +1,4 @@
 
-
 // Require the necessary discord.js classes
 const { Client, GatewayIntentBits, Collection, MembershipScreeningFieldType, ClientUser, User, time, GuildChannel, GuildManager, MessageManager, GuildMemberManager, GuildBanManager, GuildBan, GuildStickerManager, PermissionsBitField, PermissionOverwriteManager, MessageFlagsBitField, GuildMemberRoleManager, GuildMember, MessageReaction, SlashCommandBuilder } = require('discord.js');
 const { createAudioResource, createAudioPlayer, joinVoiceChannel, NoSubscriberBehavior, AudioPlayerStatus, generateDependencyReport, getVoiceConnection, VoiceConnectionStatus, StreamType } = require('@discordjs/voice');
@@ -542,7 +541,7 @@ client.on('interactionCreate', async interaction => {
     const string = interaction.options.getString('다이얼');
     if (string == wjdekq && wjsghkrkqt == 1) {
       await interaction.deferReply();
-      await client.user.setAvatar('https://emoji-uc.akamaized.net/orig/f3/37602e7718e88c5cb4787462e42095.png')////전화 걸기
+
       const message = await interaction.channel.send(' ```전화가 걸렸다 !! 뚜르르르르 뚜르르르르```');
       message.react('📲');
       connection = joinVoiceChannel({
@@ -565,7 +564,7 @@ client.on('interactionCreate', async interaction => {
     connection.destroy();
     
   });
-  await client.user.setAvatar('https://i.imgur.com/YW9XMMz.png')////원래이미지
+
     }
     if(wjsghkrkqt != 1) {
           await interaction.deferReply();
